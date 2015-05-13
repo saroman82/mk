@@ -16,8 +16,15 @@
 <h1>
 	Añade un Usuario
 </h1>
+     <form action="qrservlet" method="get">
+        <p>Enter Text to create QR Code</p>
+        <input name="qrtext" type="text">
+        <input value="Generate QR Code" type="submit">
+    </form>
 
 <c:url var="addAction" value="/usuario/crea" ></c:url>
+
+ 
 
 <form:form action="${addAction}" commandName="usuario">
 <table>

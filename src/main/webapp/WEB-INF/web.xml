@@ -29,5 +29,21 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+        
+         <display-name>QR_Code_Servlet</display-name>
+
+        <welcome-file-list>
+          <welcome-file>qr.jsp</welcome-file>
+        </welcome-file-list>
+ 
+        <servlet>
+            <servlet-name>QRCodeServlet</servlet-name>
+            <servlet-class>com.santi.qr.model.QRCodeServlet</servlet-class>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>QRCodeServlet</servlet-name>
+            <url-pattern>/qrservlet</url-pattern>
+        </servlet-mapping>
 
 </web-app>

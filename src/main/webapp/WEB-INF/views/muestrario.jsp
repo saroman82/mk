@@ -101,6 +101,12 @@
                         <td>${muestrario.id_proveedor}</td>
 			<td>${muestrario.tipo_mueble}</td>
                         <td>${muestrario.ruta}</td>
+                        <td>
+                        <form action="qrservlet" method="get">
+                            <input name="qrtext" type="hidden" value="${muestrario.ruta}">
+                         <input value="Generate QR Code" type="submit">
+                        </form>
+                         </td>
 			<td><a href="<c:url value='/muestrarios/edita/${muestrario.id_qr}' />" >Edita</a></td>
 			<td><a href="<c:url value='/muestrarios/elimina/${muestrario.id_qr}' />" >Delete</a></td>
 		</tr>

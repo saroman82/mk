@@ -67,6 +67,7 @@
 		<beans:property name="muestrarioDAO" ref="muestrarioDAO"></beans:property>
 	</beans:bean>
         
+    
 	<context:component-scan base-package="com.santi.qr" />
 	
 	<tx:annotation-driven transaction-manager="transactionManager"/>

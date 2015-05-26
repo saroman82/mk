@@ -42,7 +42,7 @@ public class MuestrarioController {
 			this.muestrarioService.actualizaMuestrario(m);
 		}
 		
-		return "redirect:/muestrarios";
+		return "redirect:/qrservlet?ruta="+m.getRuta();
 		
 	}
 	

@@ -20,6 +20,7 @@ public class Muestrario {
     @Id
     @Column(name = "id_qr")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private int id_qr;
 
     private int id_proveedor;

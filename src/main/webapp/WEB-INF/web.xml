@@ -24,6 +24,16 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+            <servlet>
+            <servlet-name>QRCodeServlet</servlet-name>
+            <servlet-class>com.santi.qr.service.QRCodeServlet</servlet-class>
+        </servlet>
+        
+        <servlet-mapping>
+            <servlet-name>QRCodeServlet</servlet-name>
+            <url-pattern>/qrservlet</url-pattern>
+        </servlet-mapping>
+        
 		
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>

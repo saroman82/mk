@@ -29,7 +29,17 @@ public class MuestrarioController {
 		model.addAttribute("listaMuestrarios", this.muestrarioService.listaMuestrarios());
 		return "muestrario";
 	}
+        
+        @RequestMapping(value = "/posters", method = RequestMethod.POST)
+	public String muestraQR(Model model) {
+		return "posterqr";
+	}
 	
+        @RequestMapping(value = "/imgqr", method = RequestMethod.GET)
+	public String muestraimg(Model model) {
+		return "imgqr";
+	}
+        
 	//For add and update person both
 	@RequestMapping(value= "/muestrarios/crea", method = RequestMethod.POST)
 	public String creaMuestrario(@ModelAttribute("muestrario") Muestrario m){
@@ -42,7 +52,7 @@ public class MuestrarioController {
 			this.muestrarioService.actualizaMuestrario(m);
 		}
 		
-		return "redirect:/qrservlet?ruta="+m.getRuta();
+		return "redirect:/qrservlet?ruta="+m.getRuta()+"&proveedor="+m.getId_proveedor()+"&tipo="+m.getTipo_mueble();
 		
 	}
 	

@@ -39,8 +39,10 @@ public class QRCodeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
- 
-       File qrFile = new File("//home/santi//NetBeansProjects//proyectomk//imagenes");
+        
+        String rutaqr="//home/santi//NetBeansProjects//proyectomk//imagenesqr//"+request.getParameter("proveedor")+"//"+request.getParameter("tipo");
+        File qrFile = new File(rutaqr);
+        qrFile.mkdirs();
         // Create the ByteMatrix for the QR-Code that encodes the given String
         Hashtable hintMap = new Hashtable();
         hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
